@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+
+
+    <mapping date-format="yyyy-MM-dd z" map-null="true" map-empty-string="true" wildcard="true" >
+        <class-a>com.javatechie.spring.paypal.api.request.UserRequest</class-a><!-- (1) -->
+        <class-b>com.hyperwallet.clientsdk.model.HyperwalletUser</class-b><!-- (2) -->
+        <field>
+            <a>dateOfBirth</a><!-- (3) -->
+            <b>dateOfBirth</b><!-- (4) -->
+        </field>
+    </mapping>
+
+
+    <mapping  map-null="true" map-empty-string="true" wildcard="true" >
+        <class-a>com.hyperwallet.clientsdk.model.HyperwalletUser</class-a><!-- (2) -->
+        <class-b>com.javatechie.spring.paypal.api.response.UserResponse</class-b><!-- (1) -->
+
+        <field>
+            <a date-format="yyyy-MM-dd z">dateOfBirth</a><!-- (3) -->
+            <b>dateOfBirth</b><!-- (4) -->
+        </field>
+    </mapping>
+
+
+
+
+
+</mappings>
